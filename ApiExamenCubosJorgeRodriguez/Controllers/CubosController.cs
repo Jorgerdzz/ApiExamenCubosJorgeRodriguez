@@ -60,7 +60,7 @@ namespace ApiExamenCubosJorgeRodriguez.Controllers
                     // Subimos al contenedor "usuarios" (que debe estar configurado como Privado en Azure)
                     await this.service.UploadBlobAsync("usuarios", fileName, stream);
                 }
-                usuario.Imagen = fileName; // Guardamos solo el nombre en la BBDD
+                usuario.Imagen = fileName;
             }
 
             await this.repo.InsertUsuarioAsync(usuario);
