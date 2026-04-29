@@ -53,8 +53,7 @@ namespace ApiExamenCubosJorgeRodriguez.Controllers
         {
             if (imagen != null)
             {
-                // El nombre del archivo puede ser el Email para que sea único
-                string fileName = usuario.Email + Path.GetExtension(imagen.FileName);
+                string fileName = imagen.FileName;
 
                 using (var stream = imagen.OpenReadStream())
                 {
